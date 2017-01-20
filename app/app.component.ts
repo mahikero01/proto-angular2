@@ -1,32 +1,23 @@
 import { Component } from '@angular/core';
+import { Todo } from './todos/shared/todo.model';
 
 @Component({
     selector: 'my-app',
     template: `
         <h4>Todos List</h4>
         <h5>Number of Todos: <span class="badge">{{todos.length}}</span></h5>
-        <ul class="list-group">
-            <li *ngFor="let todo of todos" class="list-group-item">
-                {{todo}}
-            </li>
-        </ul>
-        <div class="form-inline">
-            <input class="form-control" #todotext>
-            <button class="btn btn-default" (click)="addTodo(todotext.value)">
-                Add Todo
-            </button>
-        </div>
+        <todos-list [todos]="todos"></todos-list>
     `
 })
 
 export class AppComponent {
-    todos: Array<string>;
+    todos: Array<Todo>;
     
     constructor() {
-        this.todos = ["Todo 1", "Todo 2", "Todo 3"];
-    }
-
-    addTodo(todo: string) {
-        this.todos.push(todo);
+        this.todos = [
+            new Todo("My Todo Item 1", "My Todo 1 Description", "Sebastian"),
+            new Todo("My Todo Item 2", "My Todo 2 Description", "Sebastian"),
+            new Todo("My Todo Item 3", "My Todo 3 Description", "Sebastian")
+        ];
     }
 }

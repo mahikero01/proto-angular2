@@ -1,0 +1,1 @@
+{"version":3,"file":"todo-item.component.js","sourceRoot":"","sources":["todo-item.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAA0B,eAAe,CAAC,CAAA;AAgC1C;IAEI;IAEA,CAAC;;IAjCL;QAAC,gBAAS,CAAE;YACR,QAAQ,EAAE,WAAW;YACrB,MAAM,EAAE,CAAC,MAAM,CAAC;YAChB,QAAQ,EAAE,swBAuBT;SACJ,CAAC;;gBAAA;IAOF,eAAC;AAAD,CAAC,AALD,IAKC;AALY,gBAAQ,WAKpB,CAAA"}

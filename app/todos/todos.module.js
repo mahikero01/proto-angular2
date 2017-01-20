@@ -9,23 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var todo_model_1 = require('./todos/shared/todo.model');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.todos = [
-            new todo_model_1.Todo("My Todo Item 1", "My Todo 1 Description", "Sebastian"),
-            new todo_model_1.Todo("My Todo Item 2", "My Todo 2 Description", "Sebastian"),
-            new todo_model_1.Todo("My Todo Item 3", "My Todo 3 Description", "Sebastian")
-        ];
+var common_1 = require('@angular/common');
+var todo_item_component_1 = require('./todo-item.component');
+var todos_list_component_1 = require('./todos-list.component');
+var TodosModule = (function () {
+    function TodosModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n        <h4>Todos List</h4>\n        <h5>Number of Todos: <span class=\"badge\">{{todos.length}}</span></h5>\n        <todos-list [todos]=\"todos\"></todos-list>\n    "
+    TodosModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [todo_item_component_1.TodoItem, todos_list_component_1.TodosList],
+            exports: [todos_list_component_1.TodosList]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TodosModule);
+    return TodosModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TodosModule = TodosModule;
+//# sourceMappingURL=todos.module.js.map

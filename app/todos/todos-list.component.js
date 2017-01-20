@@ -9,23 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var todo_model_1 = require('./todos/shared/todo.model');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.todos = [
-            new todo_model_1.Todo("My Todo Item 1", "My Todo 1 Description", "Sebastian"),
-            new todo_model_1.Todo("My Todo Item 2", "My Todo 2 Description", "Sebastian"),
-            new todo_model_1.Todo("My Todo Item 3", "My Todo 3 Description", "Sebastian")
-        ];
+var TodosList = (function () {
+    function TodosList() {
     }
-    AppComponent = __decorate([
+    ;
+    TodosList = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n        <h4>Todos List</h4>\n        <h5>Number of Todos: <span class=\"badge\">{{todos.length}}</span></h5>\n        <todos-list [todos]=\"todos\"></todos-list>\n    "
+            selector: 'todos-list',
+            inputs: ['todos'],
+            template: "\n        <ul class=\"list-group\">\n            <div *ngFor=\"let todo of todos\">\n                <li class=\"list-group-item\">\n                    <todo-item [todo]=\"todo\"></todo-item>\n                </li>\n            </div>\n        </ul>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TodosList);
+    return TodosList;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TodosList = TodosList;
+//# sourceMappingURL=todos-list.component.js.map
