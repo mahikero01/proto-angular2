@@ -13,11 +13,14 @@ var TodoItem = (function () {
     function TodoItem() {
     }
     ;
+    TodoItem.prototype.deleteTodo = function () {
+        this.todo.setToCompleted();
+    };
     TodoItem = __decorate([
         core_1.Component({
             selector: 'todo-item',
             inputs: ['todo'],
-            template: "\n        <div class=\"row\">\n            <div class=\"col-md-8\">\n                <strong>{{todo.title}}</strong>\n            </div>\n            <div class=\"col-md-4\" align=\"right\">\n                <span class=\"glyphicon glyphicon-user\"></span> {{todo.responsible}}\n            </div>\n        </div>\n        <hr>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                {{todo.description}}\n            </div>\n        </div>\n        <hr>\n        <div align=\"right\" class=\"row\">\n            <div class=\"col-md-12\">\n                <button class=\"btn btn-danger btn-sm\">\n                    <span class=\"glyphicon glyphicon-trash\"></span> Delete\n                </button>\n            </div>\n        </div>\n    "
+            template: "\n        <div class=\"row\">\n            <div class=\"col-md-8\">\n                <strong>{{todo.title}}</strong>\n            </div>\n            <div class=\"col-md-4\" align=\"right\">\n                <span class=\"glyphicon glyphicon-user\"></span> {{todo.responsible}}\n            </div>\n        </div>\n        <hr>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                {{todo.description}}\n            </div>\n        </div>\n        <hr>\n        <div align=\"right\" class=\"row\">\n            <div class=\"col-md-12\">\n                <button class=\"btn btn-danger btn-sm\" (click)=\"deleteTodo()\">\n                    <span class=\"glyphicon glyphicon-trash\"></span> Delete\n                </button>\n            </div>\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], TodoItem);
