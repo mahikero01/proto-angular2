@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var add_todo_component_1 = require('./add-todo.component');
 var todo_item_component_1 = require('./todo-item.component');
 var todos_list_component_1 = require('./todos-list.component');
 var TodosModule = (function () {
@@ -18,8 +19,8 @@ var TodosModule = (function () {
     TodosModule = __decorate([
         core_1.NgModule({
             imports: [common_1.CommonModule],
-            declarations: [todo_item_component_1.TodoItem, todos_list_component_1.TodosList],
-            exports: [todos_list_component_1.TodosList]
+            declarations: [add_todo_component_1.AddTodo, todo_item_component_1.TodoItem, todos_list_component_1.TodosList],
+            exports: [add_todo_component_1.AddTodo, todos_list_component_1.TodosList]
         }), 
         __metadata('design:paramtypes', [])
     ], TodosModule);
